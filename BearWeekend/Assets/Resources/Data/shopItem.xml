@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Item>
+    <Interior>
+        <LivingRoom>
+            <item>
+                <IconName>Default</IconName>
+                <Title>흠 잡을 곳 없는 거실</Title>
+                <Price>200</Price>
+                <Style>Default</Style>
+            </item>
+            <item>
+                <IconName>Christmas</IconName>
+                <Title>트리가 빛나는 거실</Title>
+                <Price>600</Price>
+                <Style>Christmas</Style>
+            </item>
+            <item>
+                <IconName>Halloween</IconName>
+                <Title>오싹오싹! 움츠리게 되는 거실</Title>
+                <Price>600</Price>
+                <Style>Halloween</Style>
+            </item>
+            <item>
+                <IconName>Reach</IconName>
+                <Title>조금 더 고급스러운 거실</Title>
+                <Price>700</Price>
+                <Style>Reach</Style>
+            </item>
+            <item>
+                <IconName>Pinknic</IconName>
+                <Title>매일매일 벚꽃 소풍! 거실</Title>
+                <Price>800</Price>
+                <Style>Pinknic</Style>
+            </item>
+        </LivingRoom>
+        <HobbyRoom>
+            <item>
+                <IconName>Default</IconName>
+                <Title>모두가 좋아하는 취미방</Title>
+                <Price>200</Price>
+                <Style>Default</Style>
+            </item>
+            <item>
+                <IconName>Christmas</IconName>
+                <Title>산타도 놀고 싶은 취미방</Title>
+                <Price>500</Price>
+                <Style>Christmas</Style>
+            </item>
+            <item>
+                <IconName>Halloween</IconName>
+                <Title>으스스하게 놀기 위한 취미방</Title>
+                <Price>600</Price>
+                <Style>Halloween</Style>
+            </item>
+            <item>
+                <IconName>Reach</IconName>
+                <Title>조심조심 놀아야하는 취미방</Title>
+                <Price>600</Price>
+                <Style>Reach</Style>
+            </item>
+            <item>
+                <IconName>Pinknic</IconName>
+                <Title>꽃들도 샘내는 꽃샘취미방</Title>
+                <Price>700</Price>
+                <Style>Pinknic</Style>
+            </item>
+        </HobbyRoom>
+        <DressRoom>
+            <item>
+                <IconName>Default</IconName>
+                <Title>가지런하게 정돈된 옷방</Title>
+                <Price>200</Price>
+                <Style>Default</Style>
+            </item>
+            <item>
+                <IconName>Christmas</IconName>
+                <Title>훈훈함이 느껴지는 옷방</Title>
+                <Price>400</Price>
+                <Style>Christmas</Style>
+            </item>
+            <item>
+                <IconName>Luna</IconName>
+                <Title>달이 낮게 떠 있는 옷방</Title>
+                <Price>400</Price>
+                <Style>Luna</Style>
+            </item>
+            <item>
+                <IconName>Old</IconName>
+                <Title>기분마저 단정해지는 옷방</Title>
+                <Price>300</Price>
+                <Style>Old</Style>
+            </item>
+            <item>
+                <IconName>Pinknic</IconName>
+                <Title>꽃 단장을 위한 옷방</Title>
+                <Price>400</Price>
+                <Style>Pinknic</Style>
+            </item>
+        </DressRoom>
+        <BedRoom>
+            <item>
+                <IconName>Default</IconName>
+                <Title>집을 나서면 생각나는 침실</Title>
+                <Price>200</Price>
+                <Style>Default</Style>
+            </item>
+            <item>
+                <IconName>Christmas</IconName>
+                <Title>선물 양말이 채워진 침실</Title>
+                <Price>300</Price>
+                <Style>Christmas</Style>
+            </item>
+            <item>
+                <IconName>Flower</IconName>
+                <Title>잠이 잘 오는 카모마일 침실</Title>
+                <Price>400</Price>
+                <Style>Flower</Style>
+            </item>
+            <item>
+                <IconName>Old</IconName>
+                <Title>고풍스럽고 푸근한 침실</Title>
+                <Price>500</Price>
+                <Style>Old</Style>
+            </item>
+            <item>
+                <IconName>Pinknic</IconName>
+                <Title>하늘하늘 레이스를 덮은 침실</Title>
+                <Price>600</Price>
+                <Style>Pinknic</Style>
+            </item>
+        </BedRoom>
+    </Interior>
+    <Food>
+        <Normal>
+            <item>
+                <IconName>icecream</IconName>
+                <Title>달달 아이스크림</Title>
+              <Icon>icecream</Icon>
+                <Price>10</Price>
+                <Style>Snack</Style>
+            </item>
+            <item>
+                <IconName>cheapsushi</IconName>
+              <Title>방금 만든 연어 초밥</Title>
+                <Icon>cheapsushi</Icon>
+                <Price>20</Price>
+                <Style>Rice</Style>
+            </item>
+            <item>
+                <IconName>apple</IconName>
+                <Title>피사의 사과</Title>
+              <Icon>apple</Icon>
+                <Price>15</Price>
+                <Style>Fruit</Style>
+            </item>
+            <item>
+                <IconName>chicken</IconName>
+                <Title>치킨 닭다리</Title>
+              <Icon>chicken</Icon>
+                <Price>30</Price>
+                <Style>Meat</Style>
+            </item>
+            <item>
+                <IconName>hambuger</IconName>
+                <Title>뚠뚠 메가버거</Title>
+              <Icon>hambuger</Icon>
+                <Price>30</Price>
+                <Style>Meat</Style>
+            </item>
+            <item>
+                <IconName>pizza</IconName>
+                <Title>큼지막한 피자 조각</Title>
+              <Icon>pizza</Icon>
+                <Price>30</Price>
+                <Style>Meat</Style>
+            </item>
+            <item>
+                <IconName>dounut</IconName>
+                <Title>반짝반짝 도넛</Title>
+              <Icon>dounut</Icon>
+                <Price>10</Price>
+                <Style>Snack</Style>
+            </item>
+            <item>
+                <IconName>sushi</IconName>
+                <Title>더 비싼 연어 초밥</Title>
+              <Icon>sushi</Icon>
+                <Price>50</Price>
+                <Style>Rice</Style>
+            </item>
+        </Normal>
+    </Food>
+</Item>
