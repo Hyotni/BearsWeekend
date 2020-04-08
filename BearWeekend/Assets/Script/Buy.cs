@@ -32,6 +32,8 @@ public class Buy : MonoBehaviour {
     private string inventoryNumber;
     private string foodTag;
 
+    private string selectedFoodName;
+    private string selectedFoodIcon;
     private string selectedFoodNumber;
     private string selectedFoodStyle;
 
@@ -124,8 +126,9 @@ public class Buy : MonoBehaviour {
 
             if (PlayerPrefs.GetInt("TrueFood") == IS_TRUE) // 음식인 경우
             {
-                selectedFoodNumber = PlayerPrefs.GetString("SelectedFoodName");
-                selectedFoodNumber = PlayerPrefs.GetString("SelectedFoodIcon");
+                selectedFoodName = PlayerPrefs.GetString("SelectedFoodName");
+                selectedFoodIcon = PlayerPrefs.GetString("SelectedFoodIcon");
+                selectedFoodNumber = PlayerPrefs.GetString("SelectedFoodNum");
                 selectedFoodStyle = PlayerPrefs.GetString("SelectedFoodStyle");
 
                 FoodStack();
@@ -162,7 +165,7 @@ public class Buy : MonoBehaviour {
                 // 인벤토리가 비었을 때
             {
 
-                PlayerPrefs.SetString(foodNumber, selectedFoodNumber); // 음식 이미지 저장
+                PlayerPrefs.SetString(foodNumber, selectedFoodIcon); // 음식 이미지 저장
                 PlayerPrefs.SetString(foodTag, selectedFoodStyle); // 음식 스타일 저장
                 PlayerPrefs.SetInt(inventoryNumber, IS_FULL_INVENTORY); // 해당 칸에 아이템이 있음
                

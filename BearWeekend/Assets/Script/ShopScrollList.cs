@@ -205,7 +205,9 @@ public class ShopScrollList : MonoBehaviour
         if (PlayerPrefs.GetString("storeType")=="Food")
         {
             PlayerPrefs.SetInt("TrueFood", IS_TRUE);
-            PlayerPrefs.SetString("SelectedFoodName", item.iconName);
+            PlayerPrefs.SetString("SelectedFoodName", item.itemName);
+            PlayerPrefs.SetString("SelectedFoodIcon", item.iconName);
+            PlayerPrefs.SetString("SelectedFoodNum", item.itemName);
             PlayerPrefs.SetString("SelectedFoodStyle", item.style);
 
             float foodEffect = 0;

@@ -43,7 +43,7 @@ public class EatFood : MonoBehaviour {
         }
 
         FoodID = PlayerPrefs.GetString(selectedFoodNum, "Empty"); // 음식의 아이콘 이름 불러옴, 없을 경우 "Empty"로 초기화
-        image.GetComponent<Image>().sprite = Resources.Load<Sprite>("Item/Food/" + FoodID); // 불러온 아이콘을 띄움
+        image.GetComponent<Image>().sprite = Resources.Load<Sprite>("Food/Normal/" + FoodID); // 불러온 아이콘을 띄움
 
         if (PlayerPrefs.GetInt(selectedInventoryNum) == IS_EMPTY_INVENTORY || PlayerPrefs.GetString(selectedFoodNum) == "Empty")
             // 선택된 칸이 비어있는 경우 
@@ -83,7 +83,7 @@ public class EatFood : MonoBehaviour {
         foodPanel.SetActive(false);
 
         nowFood.gameObject.SetActive(true); 
-        EatenFood.GetComponent<Image>().sprite = Resources.Load<Sprite>("Item/Food/" + FoodID); // 현재 먹은 음식을 표시
+        EatenFood.GetComponent<Image>().sprite = Resources.Load<Sprite>("Food/Normal/" + FoodID); // 현재 먹은 음식을 표시
 
         string selectedFoodStyle = PlayerPrefs.GetString(selectedFoodStyleNum);
 

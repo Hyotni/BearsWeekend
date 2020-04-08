@@ -135,56 +135,48 @@
             <item>
                 <IconName>icecream</IconName>
                 <Title>달달 아이스크림</Title>
-              <Icon>icecream</Icon>
                 <Price>10</Price>
                 <Style>Snack</Style>
             </item>
             <item>
                 <IconName>cheapsushi</IconName>
               <Title>방금 만든 연어 초밥</Title>
-                <Icon>cheapsushi</Icon>
                 <Price>20</Price>
                 <Style>Rice</Style>
             </item>
             <item>
                 <IconName>apple</IconName>
                 <Title>피사의 사과</Title>
-              <Icon>apple</Icon>
                 <Price>15</Price>
                 <Style>Fruit</Style>
             </item>
             <item>
                 <IconName>chicken</IconName>
                 <Title>치킨 닭다리</Title>
-              <Icon>chicken</Icon>
                 <Price>30</Price>
                 <Style>Meat</Style>
             </item>
             <item>
                 <IconName>hambuger</IconName>
                 <Title>뚠뚠 메가버거</Title>
-              <Icon>hambuger</Icon>
                 <Price>30</Price>
                 <Style>Meat</Style>
             </item>
             <item>
                 <IconName>pizza</IconName>
                 <Title>큼지막한 피자 조각</Title>
-              <Icon>pizza</Icon>
                 <Price>30</Price>
                 <Style>Meat</Style>
             </item>
             <item>
                 <IconName>dounut</IconName>
                 <Title>반짝반짝 도넛</Title>
-              <Icon>dounut</Icon>
                 <Price>10</Price>
                 <Style>Snack</Style>
             </item>
             <item>
                 <IconName>sushi</IconName>
                 <Title>더 비싼 연어 초밥</Title>
-              <Icon>sushi</Icon>
                 <Price>50</Price>
                 <Style>Rice</Style>
             </item>
