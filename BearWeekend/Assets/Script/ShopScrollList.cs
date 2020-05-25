@@ -85,11 +85,13 @@ public class ShopScrollList : MonoBehaviour
     private void AddButtons(string storeType, string itemCategory)
     {
         XmlDocument xmlDocument = new XmlDocument();
+        TextAsset shopItemXml = (TextAsset)Resources.Load("Data/shopItem", typeof(TextAsset));
+
         string filepath = Application.dataPath + @"/Resources/Data/shopItem.xml";
         if (File.Exists(filepath))
         {
             // XML 로드
-            xmlDocument.Load(filepath);
+            xmlDocument.LoadXml(shopItemXml.text);
 
                 XmlNodeList xmlNodeList = xmlDocument.GetElementsByTagName(storeType);
                 foreach (XmlNode node in xmlNodeList)
