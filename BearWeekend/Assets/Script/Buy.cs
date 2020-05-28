@@ -21,6 +21,7 @@ public class Buy : MonoBehaviour {
     public GameObject noMoneyPanel;
     public GameObject checkPanel;
     public GameObject noBuyPanel;
+    public GameObject EMusic;
 
     public int coin = 0;
     public int price = 0;
@@ -120,8 +121,8 @@ public class Buy : MonoBehaviour {
 
             if (PlayerPrefs.GetInt("TrueFood") == IS_FALSE) // 가구인 경우
             {
-
                 PlayerPrefs.SetString(roomName, roomStyle);
+                EMusic.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("EMusic/BuyInterior");
             }
 
             if (PlayerPrefs.GetInt("TrueFood") == IS_TRUE) // 음식인 경우
@@ -132,12 +133,17 @@ public class Buy : MonoBehaviour {
                 selectedFoodStyle = PlayerPrefs.GetString("SelectedFoodStyle");
 
                 FoodStack();
+
+                EMusic.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("EMusic/BuyFood");
             }
 
             buyPanel.SetActive(false);
             checkPanel.SetActive(true);
 
             PlayerPrefs.SetInt("TrueFood", 0); // 음식 구분 정보 초기화
+            
+            EMusic.GetComponent<AudioSource>().Play();
+
 
         }
 

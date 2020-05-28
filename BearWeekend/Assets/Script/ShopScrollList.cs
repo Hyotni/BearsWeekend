@@ -28,6 +28,7 @@ public class ShopScrollList : MonoBehaviour
     const string foodStore = "Food";
     const int IS_TRUE = 1;
     const int IS_FALSE = 0;
+    private string itemTag;
 
     public List<Item> itemList;
     public Transform contentPanel;
@@ -40,6 +41,8 @@ public class ShopScrollList : MonoBehaviour
     public Image selectedItemImage;
 
     public int Coin = 0;
+
+    public GameObject EMusic;
 
     // Use this for initialization
     void Start()
@@ -93,22 +96,23 @@ public class ShopScrollList : MonoBehaviour
             // XML 로드
             xmlDocument.LoadXml(shopItemXml.text);
 
-                XmlNodeList xmlNodeList = xmlDocument.GetElementsByTagName(storeType);
-                foreach (XmlNode node in xmlNodeList)
+            XmlNodeList xmlNodeList = xmlDocument.GetElementsByTagName(storeType);
+            foreach (XmlNode node in xmlNodeList)
+            {
+                // 아이템 분류
+                XmlNodeList itemCategoryList = node.ChildNodes;
+                foreach (XmlNode itemCategoryNode in itemCategoryList)
                 {
-                    // 아이템 분류
-                    XmlNodeList itemCategoryList = node.ChildNodes;
-                    foreach (XmlNode itemCategoryNode in itemCategoryList)
+                    if (itemCategory.Equals(itemCategoryNode.Name))
                     {
-                        if (itemCategory.Equals(itemCategoryNode.Name))
-                        {
-                            CreateButton(CreateItem(itemCategoryNode.ChildNodes, storeType, itemCategory));
+                        itemTag = itemCategoryNode.Name;
+                        CreateButton(CreateItem(itemTag, itemCategoryNode.ChildNodes, storeType, itemCategory));
 
-                            Debug.Log(itemCategoryNode.ChildNodes + storeType + itemCategory);
-                            Debug.Log(itemCategoryNode.ChildNodes.Count);
-                        }
+                        Debug.Log(itemCategoryNode.ChildNodes + storeType + itemCategory);
+                        Debug.Log(itemCategoryNode.ChildNodes.Count);
                     }
                 }
+            }
 
         }
         else
@@ -135,7 +139,7 @@ public class ShopScrollList : MonoBehaviour
         shopList.itemList.Add(itemToAdd);
     }
 
-    List<Item> CreateItem(XmlNodeList nodeList, string storeType, string itemCategoryName)
+    List<Item> CreateItem(string itemTag, XmlNodeList nodeList, string storeType, string itemCategoryName)
     {
         List<Item> itemList = new List<Item>();
         // (ex: Name 필드)
@@ -143,6 +147,7 @@ public class ShopScrollList : MonoBehaviour
         {
             XmlNodeList childNode = node.ChildNodes;
             Item item = new Item();
+            item.tag = itemTag;
 
             // (ex: Name 안에 가격, 스타일, 이름 등의 필드 획득)
             foreach (XmlNode dataNode in childNode)
@@ -187,6 +192,11 @@ public class ShopScrollList : MonoBehaviour
 
             SampleButton sampleButton = newButton.GetComponent<SampleButton>();
             sampleButton.Setup(item, this);
+
+            sampleButton.GetComponent<Button>().onClick.AddListener(() => {
+                EMusic.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("EMusic/Click");
+                EMusic.GetComponent<AudioSource>().Play();
+            });
         }
     }
 
