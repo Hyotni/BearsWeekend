@@ -89,9 +89,8 @@ public class ShopScrollList : MonoBehaviour
     {
         XmlDocument xmlDocument = new XmlDocument();
         TextAsset shopItemXml = (TextAsset)Resources.Load("Data/shopItem", typeof(TextAsset));
-
-        string filepath = Application.dataPath + @"/Resources/Data/shopItem.xml";
-        if (File.Exists(filepath))
+        
+        if (shopItemXml!=null)
         {
             // XML 로드
             xmlDocument.LoadXml(shopItemXml.text);

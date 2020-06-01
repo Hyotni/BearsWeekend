@@ -6,7 +6,7 @@ public class SetScreenSize : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Screen.SetResolution(Screen.width, Screen.width/ 9*16, false);
+        Screen.SetResolution(Screen.width, Screen.width/ 9*16, true);
 
     }
 	
